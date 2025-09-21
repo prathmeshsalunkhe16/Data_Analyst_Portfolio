@@ -1,17 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prathmesh Navnath Salunkhe - Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prathmesh Salunkhe | Data Analyst</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #eef2f3, #d9e4f5);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(255,255,255,0.9);
+      position: sticky;
+      top: 0;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    header a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    header a:hover {
+      color: #007bff;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('https://picsum.photos/1600/900?blur') center/cover no-repeat;
+      color: white;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeInDown 2s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills-list span {
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 500;
+      transition: transform 0.3s;
+    }
+
+    .skills-list span:hover {
+      transform: scale(1.1);
+      background: #0056b3;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #222;
+      color: #ddd;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header / Navigation -->
+
   <header>
-    <h1>Prathmesh Navnath Salunkhe</h1>
+    <div class="logo">Prathmesh</div>
     <nav>
-      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -19,80 +151,61 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h2>Aspiring Data Analyst</h2>
-    <p>Certified in Applied Diploma in Data Analytics (Teknowell, 6 Months)</p>
-    <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm Prathmesh Salunkhe</h1>
+      <p>Data Analyst | Python | SQL | Power BI</p>
+    </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
+  <section class="section" id="about" data-aos="fade-right">
     <h2>About Me</h2>
     <p>
-    Motivated and detail-oriented B.Tech Computer Engineering student (Graduating in 2025) 
-    with a strong foundation in software development, data analytics, and cybersecurity. 
-    Currently pursuing an Applied Diploma in Data Analytics, gaining hands-on expertise in 
-    Python (Core, OOPs, NumPy, Pandas, Matplotlib, Seaborn, Dash, Plotly, Streamlit), 
-    SQL/MySQL, PL/SQL, and MongoDB. 
+      I am a detail-oriented Computer Engineering student passionate about Data Analytics and Business Insights.
     </p>
-    <p>
-    Proficient in data gathering, cleaning, and exploratory data analysis (EDA), with 
-    practical exposure to Excel (Basic & Advanced) and Power BI for data visualization. 
-    Skilled in building scalable applications using Flask, Django, and MLOps practices. 
-    Successfully developed a real-time farmer–buyer mobile app with secure payment 
-    integration and OTP-based authentication.
-    </p>
-</section>
+  </section>
 
-
-  <!-- Skills Section -->
-  <section id="skills">
+  <section class="section" id="skills" data-aos="zoom-in">
     <h2>Skills</h2>
-    <ul>
-      <li>Python (Core, OOPs, Exception Handling)</li>
-      <li>Data Libraries: Numpy, Pandas, Matplotlib, Seaborn, Plotly, Dash, Streamlit</li>
-      <li>Databases: MySQL, MongoDB, PL/SQL</li>
-      <li>Data Analytics: Data Gathering, Cleaning, EDA</li>
-      <li>Power BI (30+ charts & interactive dashboards)</li>
-      <li>Excel (Basic & Advanced)</li>
-      <li>Version Control: Git & GitHub</li>
-      <li>Web Frameworks: Flask, Django</li>
-</ul>
-
+    <div class="skills-list">
+      <span>Python</span>
+      <span>Pandas</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>Excel</span>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
+  <section class="section" id="projects" data-aos="fade-up">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Customer Churn Analysis</h3>
-      <p>
-        Analyzed customer churn dataset to identify key drivers of churn and
-        created a Power BI dashboard.
-      </p>
-      <a href="https://github.com/prathmeshsalunkhe16/Data_Analyst_Portfolio" target="_blank">View Project</a>
-    </div>
-    <div class="project">
-      <h3>Sales Dashboard</h3>
-      <p>
-        Designed interactive sales dashboard in Power BI to track performance
-        across regions and products.
-      </p>
-      <a href="#" target="_blank">View Project</a>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Customer Churn Analysis</h3>
+        <p>Analyzed churn dataset with Pandas & Power BI dashboards.</p>
+      </div>
+      <div class="project-card">
+        <h3>IPL Data Insights</h3>
+        <p>Explored IPL data with Python & SQL queries.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
+  <section class="section" id="contact" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>Email: <a href="prathmeshsalunkhe16@gmail.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/prathmesh-navnath-salunkhe-31437926b" target="_blank">linkedin.com/in/your-profile</a></p>
-    <p>GitHub: <a href="https://github.com/prathmeshsalunkhe16" target="_blank">github.com/prathmeshsalunkhe16</a></p>
+    <p>Email: youremail@example.com</p>
+    <p>LinkedIn: <a href="#" target="_blank">My LinkedIn</a></p>
+    <p>GitHub: <a href="#" target="_blank">My GitHub</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Prathmesh Salunkhe - Data Analyst Portfolio</p>
+    © 2025 Prathmesh Salunkhe | All Rights Reserved
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+
 </body>
 </html>
