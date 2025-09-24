@@ -14,15 +14,16 @@ body {
 
 /* Navbar */
 header {
-  position: fixed;
+  background-color: #ffffff; /* solid white */
+  position: fixed;            /* stays on top */
+  top: 0;
   width: 100%;
-  padding: 20px 50px;
+  z-index: 1000;              /* above other content */
+  padding: 15px 50px;         /* adjust spacing */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
 }
 
 /* Remove underline from logo text */
