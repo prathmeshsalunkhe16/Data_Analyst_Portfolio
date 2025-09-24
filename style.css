@@ -14,7 +14,7 @@ body {
 
 /* Navbar */
 header {
-  background-color: #ffffff; /* solid white */
+  background-color: #000; 
   position: fixed;            /* stays on top */
   top: 0;
   width: 100%;
