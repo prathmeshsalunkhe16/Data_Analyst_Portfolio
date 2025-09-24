@@ -38,7 +38,7 @@ header {
 
 /* Style the logo image */
 .logo img.nav-logo {
-  height: 1em;  /* matches text height */
+  height: 40px;  /* matches text height */
   width: auto;  /* keep aspect ratio */
 }
 
