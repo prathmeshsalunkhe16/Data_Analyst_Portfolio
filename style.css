@@ -25,10 +25,21 @@ header {
   z-index: 1000;
 }
 
+/* Remove underline from logo text */
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #00ffcc;
+  text-decoration: none;
+  color: #000; /* or your preferred color */
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;           /* place image + text horizontally */
+  align-items: center;     /* vertically center */
+  gap: 8px;                /* space between logo and name */
+}
+
+/* Style the logo image */
+.logo img.nav-logo {
+  height: 40px;  /* adjust size */
+  width: auto;
 }
 
 .navlist {
