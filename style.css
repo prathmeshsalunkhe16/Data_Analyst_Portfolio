@@ -28,7 +28,7 @@ header {
 /* Remove underline from logo text */
 .logo {
   text-decoration: none;
-  color: #000; /* or your preferred color */
+  color: #B28A3C; /* or your preferred color */
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;           /* place image + text horizontally */
@@ -38,7 +38,7 @@ header {
 
 /* Style the logo image */
 .logo img.nav-logo {
-  height: 40px;  /* matches text height */
+  height: 70px;  /* matches text height */
   width: auto;  /* keep aspect ratio */
 }
 
