@@ -7,6 +7,7 @@
   <link rel="icon" href="assets/logo3.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -34,8 +35,15 @@
       <a href="assets/resume.pdf" class="btn" target="_blank">Download Resume</a>
     </div>
     <div class="home-img">
-      <img src="assets/profile.jpg" alt="Profile" />
+      <model-viewer src="assets/model.glb" 
+                alt="3D Model"
+                auto-rotate 
+                camera-controls 
+                rotation-per-second="30deg" 
+                style="width:300px; height:300px;">
+      </model-viewer>
     </div>
+
   </section>
 
   <!-- About -->
