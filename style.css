@@ -1,4 +1,4 @@
-/* ==================== RESET ==================== */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +8,11 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #0f2027;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
-  line-height: 1.6;
 }
 
-/* ==================== HEADER ==================== */
+/* Navbar */
 header {
   position: fixed;
   width: 100%;
@@ -21,14 +20,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
   z-index: 1000;
-  transition: 0.3s ease;
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.9);
 }
 
 .logo {
@@ -37,14 +31,13 @@ header.scrolled {
   color: #00ffcc;
 }
 
-/* ==================== NAVIGATION ==================== */
 .navlist {
   display: flex;
   list-style: none;
 }
 
 .navlist li {
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .navlist a {
@@ -52,65 +45,24 @@ header.scrolled {
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
-  position: relative;
 }
 
-.navlist a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  background: #00ffcc;
-  transition: 0.3s;
-}
-
-.navlist a:hover::after,
-.navlist a.active::after {
-  width: 100%;
-}
-
-/* ==================== MOBILE MENU ==================== */
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
+.navlist a:hover,
+.navlist a.active {
   color: #00ffcc;
 }
 
-.navlist.open {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 80px;
-  right: 0;
-  background: rgba(0,0,0,0.95);
-  width: 200px;
-  height: calc(100% - 80px);
-  padding-top: 20px;
-  gap: 20px;
-  text-align: center;
-}
-
-/* ==================== HERO SECTION ==================== */
+/* Hero */
 .home {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 100px 50px 0;
-  background: radial-gradient(circle at top left, #203a43, #2c5364);
-  flex-wrap: wrap;
-}
-
-.home-text {
-  max-width: 500px;
 }
 
 .home-text h1 {
   font-size: 3rem;
-  font-weight: 700;
 }
 
 .home-text span {
@@ -119,56 +71,34 @@ header.scrolled {
 
 .home-text h2 {
   font-size: 1.5rem;
-  margin: 15px 0;
-}
-
-.home-text p {
-  margin-bottom: 20px;
-  opacity: 0.9;
-}
-
-.home-ctas {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.home-img {
-  margin-top: 30px;
-}
-
-.portrait-frame {
-  border: 6px solid #00ffcc;
-  border-radius: 50%;
-  padding: 5px;
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
+  margin: 10px 0;
 }
 
 .home-img img {
-  width: 320px;
+  width: 300px;
   border-radius: 50%;
-  display: block;
+  border: 5px solid #00ffcc;
+  animation: float 3s ease-in-out infinite;
 }
 
-/* ==================== BUTTON ==================== */
+/* Button */
 .btn {
   display: inline-block;
-  padding: 12px 28px;
-  background: linear-gradient(45deg, #00ffcc, #00ffaa);
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffcc;
   color: #000;
   font-weight: 600;
   border-radius: 30px;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 255, 204, 0.4);
+  background: #00ffaa;
 }
 
-/* ==================== SECTIONS ==================== */
+/* Sections */
 section {
   padding: 80px 50px;
   text-align: center;
@@ -178,40 +108,21 @@ h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #00ffcc;
-  position: relative;
 }
 
-h2::after {
-  content: "";
-  display: block;
-  margin: 10px auto 0;
-  width: 50px;
-  height: 3px;
-  background: #00ffcc;
-}
-
-/* ==================== ABOUT ==================== */
-.about p {
-  max-width: 700px;
-  margin: auto;
-  opacity: 0.9;
-}
-
-/* ==================== SKILLS ==================== */
+/* Skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 30px;
 }
 
 .skills-list span {
   background: rgba(255, 255, 255, 0.1);
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 20px;
   transition: 0.3s;
-  cursor: default;
 }
 
 .skills-list span:hover {
@@ -219,24 +130,22 @@ h2::after {
   color: #000;
 }
 
-/* ==================== PROJECTS ==================== */
-.projects-grid {
+/* Projects */
+.projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 255, 204, 0.2);
 }
 
 .project-card img {
@@ -245,24 +154,7 @@ h2::after {
   margin-bottom: 15px;
 }
 
-.project-card h3 {
-  color: #00ffcc;
-  margin-bottom: 10px;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #00ffcc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-}
-
-/* ==================== CONTACT ==================== */
+/* Contact */
 .contact p {
   margin: 10px 0;
 }
@@ -272,11 +164,7 @@ h2::after {
   text-decoration: none;
 }
 
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* ==================== FOOTER ==================== */
+/* Footer */
 footer {
   padding: 20px;
   text-align: center;
@@ -285,80 +173,8 @@ footer {
   margin-top: 30px;
 }
 
-/* ==================== ANIMATIONS ==================== */
+/* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
-}
-
-/* Fade-in animation */
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.skills-list span,
-.project-card,
-.about p {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 992px) {
-  .home {
-    flex-direction: column;
-    padding-top: 120px;
-  }
-
-  .home-img img {
-    width: 250px;
-  }
-
-  header {
-    padding: 15px 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navlist {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .home-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .home-text h2 {
-    font-size: 1.2rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-text h1 {
-    font-size: 2rem;
-  }
-
-  .home-text h2 {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
 }
