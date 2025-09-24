@@ -38,8 +38,8 @@ header {
 
 /* Style the logo image */
 .logo img.nav-logo {
-  height: 40px;  /* adjust size */
-  width: auto;
+  height: 1em;  /* matches text height */
+  width: auto;  /* keep aspect ratio */
 }
 
 .navlist {
