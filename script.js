@@ -30,27 +30,27 @@ function type() {
 }
 type();
 
-/* ==================== NAVBAR ACTIVE LINK HIGHLIGHT ==================== */
+/* ==================== NAVBAR ACTIVE LINK & HEADER SCROLL ==================== */
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navlist a");
+const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-  let top = window.scrollY;
+  const top = window.scrollY;
+
+  // Navbar active links
   sections.forEach(sec => {
-    let offset = sec.offsetTop - 120;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    const offset = sec.offsetTop - 120;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
       navLinks.forEach(link => link.classList.remove("active"));
-      document
-        .querySelector(".navlist a[href*=" + id + "]")
-        .classList.add("active");
+      document.querySelector(".navlist a[href*=" + id + "]")?.classList.add("active");
     }
   });
 
-  // Change header background on scroll
-  const header = document.querySelector("header");
+  // Header background change
   if (window.scrollY > 50) {
     header.classList.add("scrolled");
   } else {
@@ -76,11 +76,21 @@ const observer = new IntersectionObserver(
 
 fadeElems.forEach(el => observer.observe(el));
 
-/* ==================== MOBILE MENU TOGGLE (optional) ==================== */
+/* ==================== MOBILE MENU TOGGLE ==================== */
 const menuIcon = document.querySelector(".menu-icon");
 const navList = document.querySelector(".navlist");
 
 menuIcon.addEventListener("click", () => {
   navList.classList.toggle("open");
-  menuIcon.classList.toggle("bx-x");
+  menuIcon.classList.toggle("bx-x"); // change hamburger to cross
+});
+
+// Close menu when clicking a link (mobile)
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (navList.classList.contains("open")) {
+      navList.classList.remove("open");
+      menuIcon.classList.remove("bx-x");
+    }
+  });
 });
