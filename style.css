@@ -173,7 +173,7 @@ h2 {
   font-size: 1.2rem;
   text-align: justify;
   line-height: 1.6;
-  max-width: 700px;   /* paragraph ki maximum width */
+  max-width: 400px;   /* paragraph ki maximum width */
   margin: 0 auto;     /* center horizontally */
 }
 
