@@ -159,7 +159,7 @@ header {
 section {
   padding: 100px 50px;
   text-align: center;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 120px; /* fixed navbar offset */
 }
 
 h2 {
@@ -199,6 +199,12 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
+  justify-items: center; /* center cards in grid columns */
+}
+
+.projects h2 {
+  text-align: center; /* center the heading */
+  margin-bottom: 40px; /* optional spacing above cards */
 }
 
 .project-card {
@@ -207,6 +213,7 @@ h2 {
   border-radius: 15px;
   transition: transform 0.3s;
   font-size: 1.1rem;
+  text-align: center; /* optional: center text inside card */
 }
 
 .project-card:hover {
