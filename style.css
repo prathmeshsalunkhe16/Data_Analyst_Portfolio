@@ -8,10 +8,11 @@
 
 /* Starry background */
 body {
-  background: #000; /* pure black base */
+  background: #000;
   color: #fff;
   position: relative;
   overflow-x: hidden;
+  font-size: 18px; /* base font size bigger */
 }
 
 /* Layer of stars */
@@ -31,8 +32,8 @@ body::before {
     radial-gradient(2px 2px at 70% 50%, white, transparent),
     radial-gradient(1px 1px at 90% 90%, white, transparent);
   background-repeat: repeat;
-  background-size: 100px 100px; /* density of stars */
-  z-index: -1; /* behind everything */
+  background-size: 100px 100px;
+  z-index: -1;
   animation: moveStars 100s linear infinite;
 }
 
@@ -42,46 +43,43 @@ body::before {
   to { transform: translate(-100px, -100px); }
 }
 
-
 /* Navbar */
 header {
   background-color: #000000; 
-  position: fixed;            /* stays on top */
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;              /* above other content */
-  padding: 15px 50px;         /* adjust spacing */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+  z-index: 1000;
+  padding: 20px 60px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Remove underline from logo text */
+/* Logo text */
 .logo {
   text-decoration: none;
-  color: #B28A3C; /* or your preferred color */
-  font-size: 1.5rem;
+  color: #B28A3C;
+  font-size: 2rem; /* bigger text */
   font-weight: bold;
-  display: flex;           /* place image + text horizontally */
-  align-items: center;     /* vertically center */
-  gap: 8px;                /* space between logo and name */
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Separate colors for Prathmesh and Salunkhe */
 .logo .first-name {
-  color: #ffffff; /* white */
+  color: #ffffff;
 }
 
 .logo .last-name {
-  color: #B28A3C; /* metallic */
+  color: #B28A3C;
 }
 
-
-/* Style the logo image */
+/* Logo image */
 .logo img.nav-logo {
-  height: 70px;  /* matches text height */
-  width: auto;  /* keep aspect ratio */
+  height: 80px; 
+  width: auto;
 }
 
 .navlist {
@@ -90,13 +88,14 @@ header {
 }
 
 .navlist li {
-  margin-left: 25px;
+  margin-left: 30px;
 }
 
 .navlist a {
   color: #fff;
   text-decoration: none;
   font-weight: 540;
+  font-size: 1.2rem; /* bigger nav text */
   transition: 0.3s;
 }
 
@@ -111,11 +110,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 100px 50px 0;
+  padding: 120px 50px 0;
 }
 
 .home-text h1 {
-  font-size: 3rem;
+  font-size: 3.5rem; /* bigger heading */
 }
 
 .home-text span {
@@ -123,25 +122,30 @@ header {
 }
 
 .home-text h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+  font-size: 2rem; /* bigger subheading */
+  margin: 15px 0;
 }
 
-.home-img img {
-  width: 300px;
-  border-radius: 50%;
-  border: 5px solid #00ffcc;
-  animation: float 3s ease-in-out infinite;
+.home-text p {
+  font-size: 1.2rem; /* bigger paragraph */
+  margin-top: 10px;
+}
+
+/* Model-viewer */
+.home-img model-viewer {
+  width: 350px;
+  height: 350px;
 }
 
 /* Button */
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 25px;
+  padding: 12px 25px;
   background: #00ffcc;
   color: #000;
   font-weight: 600;
+  font-size: 1.1rem;
   border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
@@ -153,14 +157,19 @@ header {
 
 /* Sections */
 section {
-  padding: 80px 50px;
+  padding: 100px 50px;
   text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem; /* bigger section titles */
+  margin-bottom: 25px;
   color: #00ffcc;
+}
+
+/* About paragraph */
+.about p {
+  font-size: 1.2rem;
 }
 
 /* Skills */
@@ -168,13 +177,14 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .skills-list span {
   background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 20px;
+  font-size: 1.1rem;
   transition: 0.3s;
 }
 
@@ -186,15 +196,16 @@ h2 {
 /* Projects */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   transition: transform 0.3s;
+  font-size: 1.1rem;
 }
 
 .project-card:hover {
@@ -204,25 +215,36 @@ h2 {
 .project-card img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.1rem;
 }
 
 /* Contact */
 .contact p {
-  margin: 10px 0;
+  margin: 15px 0;
+  font-size: 1.2rem;
 }
 
 .contact a {
   color: #00ffcc;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 /* Footer */
 footer {
-  padding: 20px;
+  padding: 25px;
   text-align: center;
   background: rgba(0, 0, 0, 0.3);
-  font-size: 14px;
+  font-size: 1rem;
   margin-top: 30px;
 }
 
