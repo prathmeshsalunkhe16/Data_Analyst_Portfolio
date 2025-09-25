@@ -171,7 +171,7 @@ h2 {
 /* About paragraph */
 .about p {
   font-size: 1.2rem;
-  text-align: center;  /* added justify */
+  text-align: justify;  /* added justify */
   line-height: 1.6;     /* optional, readability ke liye */
 }
 
@@ -199,16 +199,19 @@ h2 {
 
 /* Projects */
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  justify-items: center; /* center cards */
-  margin-top: 40px; /* spacing from section heading */
+  text-align: center; /* Heading center mai aa jayega */
+  margin-top: 40px;
 }
 
 .projects h2 {
-  text-align: center; /* center heading */
-  margin-bottom: 40px; /* space between heading and cards */
+  margin-bottom: 40px; /* heading aur cards ke beech gap */
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
 .project-card {
