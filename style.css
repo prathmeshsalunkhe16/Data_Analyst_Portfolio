@@ -171,10 +171,11 @@ h2 {
 /* About paragraph */
 .about p {
   font-size: 1.2rem;
-  text-align: justify;  /* added justify */
-  line-height: 1.6;     /* optional, readability ke liye */
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 800px;   /* paragraph ki maximum width */
+  margin: 0 auto;     /* center horizontally */
 }
-
 
 /* Skills */
 .skills-list {
