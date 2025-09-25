@@ -202,12 +202,13 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  justify-items: center; /* center cards in grid columns */
+  justify-items: center; /* center cards */
+  margin-top: 40px; /* spacing from section heading */
 }
 
 .projects h2 {
-  text-align: center; /* center the heading */
-  margin-bottom: 40px; /* optional spacing above cards */
+  text-align: center; /* center heading */
+  margin-bottom: 40px; /* space between heading and cards */
 }
 
 .project-card {
