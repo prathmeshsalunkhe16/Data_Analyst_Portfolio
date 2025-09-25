@@ -118,7 +118,7 @@ header {
 }
 
 .home-text span {
-  color: #00ffcc;
+  color: #87CEEB;
 }
 
 .home-text h2 {
@@ -142,7 +142,7 @@ header {
   display: inline-block;
   margin-top: 25px;
   padding: 12px 25px;
-  background: #00ffcc;
+  background: #87CEEB;
   color: #000;
   font-weight: 600;
   font-size: 1.1rem;
@@ -152,7 +152,7 @@ header {
 }
 
 .btn:hover {
-  background: #00ffaa;
+  background: #87CEEB;
 }
 
 /* Sections */
@@ -164,7 +164,7 @@ section {
 h2 {
   font-size: 2.5rem; /* bigger section titles */
   margin-bottom: 25px;
-  color: #00ffcc;
+  color: #87CEEB;
 }
 
 /* About paragraph */
@@ -189,7 +189,7 @@ h2 {
 }
 
 .skills-list span:hover {
-  background: #00ffcc;
+  background: #87CEEB;
   color: #000;
 }
 
@@ -234,7 +234,7 @@ h2 {
 }
 
 .contact a {
-  color: #00ffcc;
+  color: #87CEEB;
   text-decoration: none;
   font-size: 1.2rem;
 }
