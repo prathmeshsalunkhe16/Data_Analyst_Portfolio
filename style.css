@@ -164,7 +164,7 @@ section {
 
 h2 {
   font-size: 2.5rem; /* bigger section titles */
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   color: #4CB7E1;
 }
 
@@ -174,7 +174,7 @@ h2 {
   text-align: justify;
   line-height: 1.8;
   max-width: 990px;   /* paragraph ki maximum width */
-  margin: 0 auto 50px auto;     /* center horizontally */
+  margin: 0 auto 70px auto;     /* center horizontally */
 }
 
 /* Skills */
@@ -183,7 +183,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .skills-list span {
@@ -214,7 +214,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 50px;
   justify-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .project-card {
