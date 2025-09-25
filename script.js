@@ -25,20 +25,36 @@ function type() {
 }
 type();
 
-// Navbar active link highlight
+// Navbar active link highlight - scroll + click optimized
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navlist a");
+const header = document.querySelector("header");
+const headerHeight = header.offsetHeight;
 
-window.onscroll = () => {
-  let top = window.scrollY;
+// Function to update active link based on scroll position
+function updateActiveLink() {
+  let scrollPos = window.scrollY + headerHeight + 5; // small buffer
+
   sections.forEach(sec => {
-    let offset = sec.offsetTop - 100;
+    let offsetTop = sec.offsetTop;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
-    if (top >= offset && top < offset + height) {
+    if (scrollPos >= offsetTop && scrollPos < offsetTop + height) {
       navLinks.forEach(link => link.classList.remove("active"));
-      document.querySelector(".navlist a[href*=" + id + "]").classList.add("active");
+      const activeLink = document.querySelector(`.navlist a[href="#${id}"]`);
+      if(activeLink) activeLink.classList.add("active");
     }
   });
-};
+}
+
+// Scroll event
+window.addEventListener("scroll", updateActiveLink);
+
+// Click event - instant active highlight
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
