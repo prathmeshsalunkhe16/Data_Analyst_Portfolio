@@ -220,12 +220,14 @@ h2 {
 
 .project-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 16px;
+  padding: 25px;
   border-radius: 15px;
   border: 1px solid #ffffff;
   transition: transform 0.3s;
   font-size: 1.1rem;
   text-align: center; /* optional: center text inside card */
+  height: 250px; 
+  overflow: hidden;
 }
 
 .project-card:hover {
