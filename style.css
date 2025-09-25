@@ -219,18 +219,17 @@ h2 {
 }
 
 .project-card {
-  background: rgba(178, 138, 60, 0.15); /* #B28A3C with transparency */
+  background: rgba(255, 255, 255, 0.05);
   padding: 25px;
   border-radius: 15px;
-  border: 1px solid #ffffff; /* white border */
+  border: 1px solid #ffffff;
   transition: transform 0.3s;
   font-size: 1.1rem;
-  text-align: center; 
+  text-align: center; /* optional: center text inside card */
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  background: rgba(178, 138, 60, 0.25); /* hover पर थोड़ा गहरा transparent */
 }
 
 .project-card img {
