@@ -37,6 +37,16 @@ header {
   gap: 8px;                /* space between logo and name */
 }
 
+/* Separate colors for Prathmesh and Salunkhe */
+.logo .first-name {
+  color: #ffffff; /* white */
+}
+
+.logo .last-name {
+  color: #B28A3C; /* metallic */
+}
+
+
 /* Style the logo image */
 .logo img.nav-logo {
   height: 70px;  /* matches text height */
