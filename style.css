@@ -159,6 +159,7 @@ header {
 section {
   padding: 100px 50px;
   text-align: center;
+  scroll-margin-top: 120px;
 }
 
 h2 {
