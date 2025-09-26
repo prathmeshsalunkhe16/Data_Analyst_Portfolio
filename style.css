@@ -245,10 +245,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-.project-card i {
-  font-size: 160px;
-  color: #4CB7E1;
+.project-card img.project-icon {
+  width: 140px;
+  height: auto;
   margin-bottom: 25px;
+  filter: invert(72%) sepia(47%) saturate(500%) hue-rotate(180deg);
 }
 
 .project-card h3 {
