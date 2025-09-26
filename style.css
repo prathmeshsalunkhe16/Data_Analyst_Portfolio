@@ -239,17 +239,16 @@ h2 {
   transform: translateY(-10px);
 }
 
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.project-card img.project-icon {
+.project-card svg.project-icon {
   width: 140px;
   height: 140px;
   margin-bottom: 25px;
   filter: invert(72%) sepia(47%) saturate(500%) hue-rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover svg.project-icon {
+  transform: scale(1.1);
 }
 
 .project-card h3 {
