@@ -247,7 +247,7 @@ h2 {
 
 .project-card img.project-icon {
   width: 140px;
-  height: auto;
+  height: 140px;
   margin-bottom: 25px;
   filter: invert(72%) sepia(47%) saturate(500%) hue-rotate(180deg);
 }
