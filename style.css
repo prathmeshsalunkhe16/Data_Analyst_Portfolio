@@ -207,13 +207,13 @@ h2 {
 }
 
 .projects h2 {
-  margin-bottom: 70px; /* heading aur cards ke beech gap */
+  margin-bottom: 90px; /* heading aur cards ke beech gap */
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 25px;
+  gap: 9px;
   justify-items: center;
 }
 
@@ -246,7 +246,7 @@ h2 {
 }
 
 .project-card i {
-  font-size: 90px;
+  font-size: 160px;
   color: #4CB7E1;
   margin-bottom: 25px;
 }
