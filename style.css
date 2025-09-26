@@ -239,15 +239,17 @@ h2 {
   transform: translateY(-10px);
 }
 
-.project-card svg.project-icon {
+/* 🔄 CHANGED: project icons via <img> instead of <svg> */
+.project-card img.project-icon {
   width: 140px;
   height: 140px;
   margin-bottom: 25px;
-  filter: invert(72%) sepia(47%) saturate(500%) hue-rotate(180deg);
+  filter: invert(62%) sepia(80%) saturate(500%) hue-rotate(160deg) brightness(100%) contrast(97%);
+  /* filter convert karega icon ko Projects heading color (#4CB7E1) ke jaisa */
   transition: transform 0.3s ease;
 }
 
-.project-card:hover svg.project-icon {
+.project-card:hover img.project-icon {
   transform: scale(1.1);
 }
 
