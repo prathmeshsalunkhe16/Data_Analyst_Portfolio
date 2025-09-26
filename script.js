@@ -68,7 +68,7 @@ navLinks.forEach(link => {
 
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - headerHeight + 1,
+        top: targetSection.offsetTop,
         behavior: "smooth"
       });
     }
