@@ -212,22 +212,26 @@ h2 {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 50px;
   justify-items: center;
-  margin-top: 50px;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 9px;
-  border-radius: 15px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 16px;
   border: 1px solid #ffffff;
+  padding: 25px;
   transition: transform 0.3s;
   font-size: 1.1rem;
   text-align: center; /* optional: center text inside card */
-  height: 250px; 
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-card:hover {
