@@ -242,7 +242,7 @@ h2 {
   transform: translateY(-10px);
 }
 
-/* 🔄 CHANGED: project icons via <img> instead of <svg> */
+/* project icons via <img> instead of <svg> */
 .project-card img.project-icon {
   width: 120px;
   height: 120px;
@@ -295,4 +295,188 @@ footer {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
+}
+
+
+
+
+
+/* =======================
+   📱 MOBILE RESPONSIVE (NEW)
+======================= */
+@media (max-width: 768px) {
+
+  /* Header/Navbar –– NEW */
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+  }
+
+  .logo {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo img.nav-logo {
+    height: 60px; /* thoda chhota logo mobile pe */
+  }
+
+  .navlist {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .navlist li {
+    margin: 8px 0;
+  }
+
+  .navlist a {
+    font-size: 1rem;
+  }
+
+  /* Hero Section –– NEW */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 0;
+  }
+
+  .home-text {
+    margin-bottom: 30px;
+  }
+
+  .home-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+  }
+
+  .home-img model-viewer {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Sections padding –– NEW */
+  section {
+    padding: 100px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  /* Skills –– NEW */
+  .skills-list {
+    gap: 15px;
+  }
+
+  .skills-list span {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  /* Projects –– NEW */
+  .projects-container {
+    grid-template-columns: 1fr; /* ek column me cards */
+    gap: 30px;
+  }
+
+  .project-card {
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .project-card img.project-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Contact –– NEW */
+  .contact p,
+  .contact a {
+    font-size: 1rem;
+  }
+
+  /* Footer –– NEW */
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+/* HAMBURGER default hide on PC */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Responsive hamburger + navlist */
+@media (max-width: 768px) {
+
+  /* hamburger visible only on mobile */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  /* navlist hidden by default on mobile */
+  .navlist {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background: rgba(0,0,0,0.9);
+    margin-top: 60px;
+    padding: 15px 0;
+  }
+
+  /* navlist active state */
+  .navlist.active {
+    display: flex;
+  }
+
+  .navlist li {
+    margin: 12px 0;
+  }
+
+  /* hero + model-viewer mobile tweaks */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 0;
+  }
+
+  .home-img model-viewer {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+  }
 }

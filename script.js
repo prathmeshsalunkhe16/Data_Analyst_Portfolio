@@ -82,3 +82,16 @@ navLinks.forEach(link => {
 
 // Initial call (refresh par bhi correct active)
 updateActiveLink();
+
+
+
+
+
+// Hamburger menu toggle –– NEW
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.navlist');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
+
