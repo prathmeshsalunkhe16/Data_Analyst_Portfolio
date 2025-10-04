@@ -349,7 +349,7 @@ h2 {
 .contact-img {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .contact-img img {
