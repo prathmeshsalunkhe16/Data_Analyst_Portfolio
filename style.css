@@ -360,6 +360,26 @@ h2 {
   background: #fff;
 }
 
+/* Glow Wrapper for Contact Image */
+.glow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
+  background: #000; /* circle background */
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.15),
+              0 0 60px 20px rgba(76, 183, 225, 0.2); /* glowing effect */
+}
+
+.glow-wrapper img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 /* Footer */
 footer {
   padding: 25px;
