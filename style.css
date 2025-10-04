@@ -271,15 +271,93 @@ h2 {
 }
 
 /* Contact */
-.contact p {
-  margin: 15px 0;
-  font-size: 1.2rem;
+/* ==========================
+   📌 CONTACT SECTION (NEW)
+========================== */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  text-align: left;
 }
 
-.contact a {
-  color: #4CB7E1;
-  text-decoration: none;
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #B28A3C;
+}
+
+.contact-item h4 {
+  margin: 0;
   font-size: 1.2rem;
+  color: #fff;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #aaa;
+}
+
+.social-links {
+  margin: 25px 0;
+}
+
+.social-links a {
+  display: inline-block;
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #4CB7E1;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.contact-footer {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.contact-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  background: #fff;
 }
 
 /* Footer */
