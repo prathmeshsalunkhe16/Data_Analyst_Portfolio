@@ -353,8 +353,8 @@ h2 {
 }
 
 .contact-img img {
-  width: 280px;
-  height: 280px;
+  width: 360px;
+  height: 360px;
   border-radius: 20px;
   object-fit: cover;
   background: #fff;
@@ -373,8 +373,8 @@ h2 {
 }
 
 .glow-wrapper img {
-  width: 260px;
-  height: 260px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   object-fit: cover;
 }
