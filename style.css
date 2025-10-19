@@ -272,6 +272,81 @@ h2 {
 
 
 
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  width: 90%;
+  margin: auto;
+}
+
+.skill-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 25px #00bfff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 45px #00bfff;
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  color: #00bfff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+.skill-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  background: #00bfff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px #00bfff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-icon i {
+  font-size: 2rem;
+  color: #000;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 60px #00bfff;
+}
+
+.skill p {
+  margin-top: 10px;
+  color: #00bfff;
+  font-size: 1rem;
+  text-shadow: 0 0 8px #00bfff;
+}
+
+
+
+
+
 /* Projects */
 .projects {
   text-align: center; /* Heading center mai aa jayega */
