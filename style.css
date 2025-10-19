@@ -229,7 +229,7 @@ h2 {
   font-size: 1.3rem;
   margin-bottom: 25px;
   color: #47caff;
-  text-shadow: 0 0 10px #00bfff;
+  /* text-shadow: 0 0 10px #00bfff; */
 }
 
 /* ====== Skill Items (Circular Icons + Text) ====== */
@@ -269,7 +269,7 @@ h2 {
 }
 
 .skill-item p {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: #d9f3ff;
   text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
 }
