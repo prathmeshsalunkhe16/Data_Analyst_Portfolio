@@ -1,26 +1,4 @@
 // Typing Effect
-const skillCards = document.querySelectorAll('.skill-card');
-  
-document.addEventListener('mousemove', e => {
-  skillCards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const midX = rect.width / 2;
-    const midY = rect.height / 2;
-
-    const rotateX = ((y - midY) / midY) * 4;
-    const rotateY = ((x - midX) / midX) * -4;
-
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-});
-
-document.addEventListener('mouseleave', () => {
-  skillCards.forEach(card => card.style.transform = 'rotateX(0) rotateY(0)');
-});
-
-
 const typing = document.getElementById("typing");
 const roles = ["Data Analyst ", "Python Developer ", "SQL Enthusiast ", "Power BI Learner "];
 let i = 0, j = 0, current = "", isDeleting = false;
