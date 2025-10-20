@@ -373,12 +373,14 @@ h2 {
 
 .project-links a {
   font-size: 1.8rem;
-  color: #4CB7E1;
-  transition: 0.3s;
+  color: inherit; /* no custom color */
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 .project-links a:hover {
-  color: #fff;
+  color: #ffffff;
+  text-shadow: 0 0 10px #4CB7E1, 0 0 20px #4CB7E1;
   transform: scale(1.2);
 }
 
