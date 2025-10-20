@@ -95,3 +95,41 @@ menuToggle.addEventListener('click', () => {
   navList.classList.toggle('active');
 });
 
+
+
+
+
+
+
+
+
+// About typing effect with fade-in
+const aboutTextEl = document.getElementById("about-text");
+const fullText = aboutTextEl.getAttribute("data-text");
+let aboutIndex = 0;
+let typingDone = false;
+
+function typeAbout() {
+  if (aboutIndex <= fullText.length) {
+    aboutTextEl.textContent = fullText.substring(0, aboutIndex++);
+    setTimeout(typeAbout, 20); // typing speed (20ms per character)
+  } else {
+    typingDone = true; // typing finished
+  }
+}
+
+// Intersection Observer to start typing when About section is visible
+const aboutSection = document.getElementById("about");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !typingDone) {
+      // Fade-in
+      aboutTextEl.classList.add("visible");
+      // Start typing
+      typeAbout();
+      observer.unobserve(aboutSection); // stop observing after start
+    }
+  });
+}, { threshold: 0.5 }); // 50% of section visible triggers
+
+observer.observe(aboutSection);
