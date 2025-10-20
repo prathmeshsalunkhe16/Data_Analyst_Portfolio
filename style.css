@@ -178,15 +178,6 @@ h2 {
   margin: 0 auto 70px auto;     /* center horizontally */
 }
 
-/* Fade-in effect initially hidden */
-#about-text {
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-}
-#about-text.visible {
-  opacity: 1;
-}
-
 
 /* Skills */
 .skills-list {
