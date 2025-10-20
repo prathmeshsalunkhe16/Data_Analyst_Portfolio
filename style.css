@@ -500,7 +500,7 @@ h2 {
   background: radial-gradient(circle, rgba(76,183,225,0.5) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
-  animation: blinkBlue 2s infinite ease-in-out;
+  animation: pulseBlue 3s infinite ease-in-out;
 }
 
 .glow-wrapper img {
@@ -518,13 +518,19 @@ h2 {
   transform: scale(1.1);
 }
 
-/* Blinking animation */
-@keyframes blinkBlue {
-  0%, 100% {
+/* Breathing pulse animation */
+@keyframes pulseBlue {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
     opacity: 0.6;
   }
   50% {
+    transform: translate(-50%, -50%) scale(1.05);
     opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.6;
   }
 }
 
