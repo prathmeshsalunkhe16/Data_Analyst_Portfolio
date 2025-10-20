@@ -363,6 +363,27 @@ h2 {
   margin-top: 5px; 
 }
 
+/* Project Links Icons */
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-links a {
+  font-size: 1.8rem;
+  color: #4CB7E1;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+
+
 /* Contact */
 /* ==========================
    📌 CONTACT SECTION (NEW)
