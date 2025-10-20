@@ -478,21 +478,54 @@ h2 {
 
 /* Glow Wrapper for Contact Image */
 .glow-wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   padding: 10px;
-  background: #000; /* circle background */
-  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.15),
-              0 0 60px 20px rgba(76, 183, 225, 0.2); /* glowing effect */
+  background: #000;
+  overflow: hidden;
+}
+
+/* Blue blinking light behind photo */
+.glow-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 360px;  /* adjust as per your photo size */
+  height: 360px; /* same as above */
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(76,183,225,0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: blinkBlue 2s infinite ease-in-out;
 }
 
 .glow-wrapper img {
+  position: relative;
+  z-index: 1;
   width: 340px;
   height: 340px;
   border-radius: 50%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect on hover */
+.glow-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* Blinking animation */
+@keyframes blinkBlue {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 
