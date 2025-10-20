@@ -48,13 +48,24 @@
       <a href="assets/Prathmesh_Salunkhe_Resume.pdf" class="btn" target="_blank">Download Resume</a>
     </div>
     <div class="home-img">
-      <model-viewer src="assets/model.glb" 
-                alt="3D Model"
-                auto-rotate 
-                camera-controls 
-                rotation-per-second="30deg" 
-                style="width:300px; height:300px;">
-      </model-viewer>
+      <div class="model-container">
+        <!-- Loader (Logo + Spinner Combo) -->
+        <div class="model-loader">
+          <img src="assets/logo3.png" class="loader-logo" alt="Loading Logo" />
+          <div class="loader-spinner"></div>
+        </div>
+
+        <!-- Your 3D Model -->
+        <model-viewer
+          src="assets/model.glb"
+          alt="3D Model"
+          auto-rotate
+          camera-controls
+          rotation-per-second="30deg"
+          style="width: 300px; height: 300px;"
+          onload="document.querySelector('.model-loader').classList.add('hide-loader');">
+        </model-viewer>
+      </div>
     </div>
 
   </section>
