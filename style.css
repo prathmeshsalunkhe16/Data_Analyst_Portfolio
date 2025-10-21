@@ -544,12 +544,6 @@ h2 {
   background: #fff;
 }
 
-.contact-img img:hover{
-  color: #fff;
-  text-shadow: 0 0 10px #4CB7E1, 0 0 20px #4CB7E1;
-  transform: scale(1.2);
-}
-
 /* Glow Wrapper for Contact Image */
 .glow-wrapper {
   display: flex;
@@ -567,6 +561,12 @@ h2 {
   height: 340px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.glow-wrapper img:hover{
+  color: #fff;
+  text-shadow: 0 0 10px #4CB7E1, 0 0 20px #4CB7E1;
+  transform: scale(1.2);
 }
 
 
