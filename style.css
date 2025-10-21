@@ -563,12 +563,6 @@ h2 {
   object-fit: cover;
 }
 
-.glow-wrapper img:hover{
-  color: #fff;
-  text-shadow: 0 0 10px #4CB7E1, 0 0 20px #4CB7E1;
-  transform: scale(1.2);
-}
-
 
 /* Footer */
 footer {
