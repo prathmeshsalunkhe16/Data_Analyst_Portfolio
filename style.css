@@ -429,7 +429,7 @@ h2 {
   line-height: 1.4;
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2;     /* max 2 lines */
+  -webkit-line-clamp: 4;     /* max 4 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
