@@ -364,7 +364,7 @@ h2 {
 
 .project-card {
   background: rgba(0, 0, 0, 0.3);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   max-width: 360px;
   width: 100%;
   border-radius: 20px;
