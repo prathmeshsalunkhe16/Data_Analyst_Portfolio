@@ -1,6 +1,6 @@
 // Typing Effect
 const typing = document.getElementById("typing");
-const roles = ["Data Analyst ", "Python Developer ", "SQL Enthusiast ", "Power BI Learner "];
+const roles = ["Data Analyst ", "SQL Enthusiast ", "Power BI Developer ", "Business Intelligence Analyst "];
 let i = 0, j = 0, current = "", isDeleting = false;
 
 function type() {
