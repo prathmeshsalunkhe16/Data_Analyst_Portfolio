@@ -378,7 +378,7 @@ h2 {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 15px; 
 }
@@ -418,11 +418,20 @@ h2 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0;   /* margin removed */
+  min-height: 72px;              /* 🔥 SAME SPACE FOR BOTH CARDS */
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .project-card p {
-  font-size: 1rem;
-  margin: 0;   /* margin removed */
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card a { 
